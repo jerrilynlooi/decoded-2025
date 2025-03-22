@@ -62,24 +62,24 @@ export default function WeatherWidget() {
 
   return (
 		weather && (
-			<div className="mt-6 p-4 bg-white text-black rounded-xl shadow-md">
-				<h2 className="text-xl font-semibold">{weather.name}</h2>
-				<p className="text-gray-700 capitalize">{weather.weather[0].description}</p>
+			<div className="p-6 max-w-md mx-auto bg-gradient-to-b from-blue-100 to-blue-400 rounded-lg shadow-xl">
+				<div className="flex flex-row">
+					<div className="flex-1">
+						<h2 className="text-xl font-semibold">{weather.name}</h2>
+						<div className="text-4xl text-blue-800">{weather.main.temp}°C</div>
+						<p className="capitalize">{weather.weather[0].description}</p>
+						<div>
+							<p className="">Wind Speed: {weather.wind.speed} m/s -- Humidity: {weather.main.humidity}%</p>
+						</div>
+					</div>
 
 				{/* Display corresponding weather image */}
-				<div className="flex justify-center">
-					<img
-						src={weatherImages[weather.weather[0].main] || "default.png"}
-						alt={weather.weather[0].main}
-						className="w-24 h-24"
-					/>
-				</div>
-
-				<div className="flex justify-center items-center space-x-4 mt-3">
-					<div className="text-4xl">{weather.main.temp}°C</div>
-					<div>
-						<p className="text-sm">Wind Speed: {weather.wind.speed} m/s</p>
-						<p className="text-sm">Humidity: {weather.main.humidity}%</p>
+					<div className="flex flex-col">
+						<img
+							src={weatherImages[weather.weather[0].main] || "default.png"}
+							alt={weather.weather[0].main}
+							className="w-24 h-24"
+						/>
 					</div>
 				</div>
 			</div>
