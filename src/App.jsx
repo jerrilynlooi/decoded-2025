@@ -1,6 +1,6 @@
 import './App.css';
 /* import ProgressBarWidget from "./widgets/progress-bar"; */
-/* import WeatherWidget from "./widgets/weather-widget"; */
+import WeatherWidget from "./widgets/weather-widget";
 /* import CurrencyWidget from "./widgets/currency-widget"; */
 /* import ImageSlider from "./widgets/image-slider"; */
 
@@ -29,7 +29,7 @@ function App() {
           {/* <ProgressBarWidget /> */}
         </div>
         <div className="w-full max-w-3xl">
-          {/* <WeatherWidget /> */}
+          <WeatherWidget />
         </div>
         <div className="w-full max-w-3xl">
           {/* <CurrencyWidget /> */}
