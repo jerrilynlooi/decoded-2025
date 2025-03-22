@@ -1,8 +1,8 @@
 import './App.css';
-/* import ProgressBarWidget from "./widgets/progress-bar"; */
+import ProgressBarWidget from "./widgets/progress-bar";
 import WeatherWidget from "./widgets/weather-widget";
-/* import CurrencyWidget from "./widgets/currency-widget"; */
-/* import ImageSlider from "./widgets/image-slider"; */
+import CurrencyWidget from "./widgets/currency-widget";
+import ImageSlider from "./widgets/image-slider";
 
 function App() {
   return (
@@ -24,18 +24,18 @@ function App() {
         </h2>
       </div>
       
-      <div className="flex flex-col items-center gap-16 pb-16">
+      <div className="mt-14 flex flex-col items-center gap-8 pb-16 z-2">
         <div className="w-full max-w-3xl">
-          {/* <ProgressBarWidget /> */}
+          <ProgressBarWidget />
         </div>
         <div className="w-full max-w-3xl">
           <WeatherWidget />
         </div>
         <div className="w-full max-w-3xl">
-          {/* <CurrencyWidget /> */}
+          <CurrencyWidget />
         </div>
         <div className="w-full max-w-3xl">
-          {/* <ImageSlider /> */}
+          <ImageSlider />
         </div>
       </div>
     </div>
